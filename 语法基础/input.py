@@ -4,4 +4,4 @@ temp = input("请输入您的姓名:")
 # type()如果你只有第一个参数则返回对象的类型
 type(temp)
 
-print("你好，"+temp+"!")
+print("你好，" + temp + "!")
