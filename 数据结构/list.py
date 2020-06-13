@@ -21,10 +21,6 @@ print(a)
 a[7] = 64
 print(a)
 
-# 可以在列表末尾通过append()方法来添加新元素 - 直接修改原列表
-a.append(216)
-print(a)
-
 # 列表支持对切片进行赋值，来改变列表的内容
 letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
 # 1. 替换某些元素
@@ -50,3 +46,53 @@ print(x[0])
 print(x[0][1])
 
 
+# 列表的常用方法
+name_list = ["zhangsan", "lisi", "wamgwu"]
+# 1.取索引 - 知道数据内容，确定其索引值
+# 使用idex方法需要注意，如果传入数据不在列表中，程序会报错
+print(name_list.index('lisi'))
+
+# 2.增加数据
+# append方法可以向列表的末尾增加数据
+name_list.append('王小二')
+# insert方法会在索引值所在的位置增加数据
+name_list.insert(1, "小美")
+# extend方法在列表的末尾追加其他列表得到全部数据
+temp = ["xiaohuang", "小明"]
+name_list.extend(temp)
+
+# 3.删除数据
+# remove方法可以从列表中删除指定数据
+name_list.remove('wangwu')
+# pop方法在默认情况下，删除列表最后一个数据
+name_list.pop()
+# pop可以删除指定索引位置的数据
+name_list.pop(3)
+# clear方法可以清空整个列表
+name_list.clear()
+# del关键字删除列表中的数据 - 本质上是将一个变量从内存中删除
+# 删除数据建议使用列表提供的方法
+name_list = ["zhangsan", "wangwu", "lisi", "wamgwu"]
+del name_list[1]
+
+# 4.计数
+# count方法可以统计列表中某个数据出现的次数
+count = name_list.count("wangwu")
+
+# 5.排序
+name_list = ["zhangsan", "wangwu", "lisi", "wangxiaoer"]
+num_list = [2, 1, 0, 3]
+# # 升序
+# name_list.sort()
+# num_list.sort()
+# # 降序
+# name_list.sort(reverse=False)
+# num_list.sort(reverse=False)
+# 逆序
+name_list.reverse()
+num_list.reverse()
+
+# 列表的循环遍历
+name_list = ["zhangsan", "wangwu", "lisi", "wangxiaoer"]
+for name in name_list:
+    print('my name is %s' % name)
