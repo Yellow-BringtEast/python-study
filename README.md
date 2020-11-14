@@ -17,3 +17,7 @@ python学习中一些简单的项目。
 ## 数据结构
 
 介绍列表、元祖等python中的数据结构。
+
+## WEB
+
+使用python和JavaScript进行web编程。
