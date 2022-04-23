@@ -1,5 +1,5 @@
 # 当前进度
-2404 / 100000
+3009 / 100000
 
 # python-study
 
@@ -24,3 +24,11 @@ python学习中一些简单的项目。
 ## WEB
 
 使用python和JavaScript进行web编程。
+
+## 机器学习
+
+* 数据分析算法：常用的数据挖掘算法，包含决策树、朴素贝叶斯、SVM、KNN、K-means等；涉及sklearn，seaborn等库的使用
+
+## 爬虫
+
+* xu_wordcloud：爬取许嵩网易云热门前50歌曲的歌词，并生成歌词词云；涉及selenium、jieba、wordcloud等库
