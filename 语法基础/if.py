@@ -14,8 +14,23 @@ print("你妹好漂亮!（进阶版）") if 1 <= guess <= 100 else print("你大
 # 多个判断条件时
 if 1 <= guess < 30:
     print('30以下')
-elif 30 <= guess < 50
+elif 30 <= guess < 50:
     print('30~50之间')
 else:
     print('50~100之间')
 
+# 进阶：判断为真的各类情况
+a = True
+
+if a is True:
+    print('ture')
+
+if a == True:
+    print('ture')
+
+# 非空的对象，非0的数字会被处理成True
+if a:
+    print('ture')
+
+if bool(a):
+    print('ture')
