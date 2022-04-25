@@ -3,6 +3,9 @@ Python 中可以通过组合一些值得到多种 复合 数据类型。其中�
 逗号分隔的一组值（元素）得到。一个 列表 可以包含不同类型的元素，但通常使用时各个元素类型相同。
 """
 
+import sys
+import dis
+
 # 一个列表的示例
 list = [1, 4, 9, 16, 25]
 
@@ -63,7 +66,7 @@ name_list.extend(temp)
 
 # 3.删除数据
 # remove方法可以从列表中删除指定数据
-name_list.remove('wangwu')
+name_list.remove('wamgwu')
 # pop方法在默认情况下，删除列表最后一个数据
 name_list.pop()
 # pop可以删除指定索引位置的数据
@@ -96,3 +99,13 @@ num_list.reverse()
 name_list = ["zhangsan", "wangwu", "lisi", "wangxiaoer"]
 for name in name_list:
     print('my name is %s' % name)
+
+# 不同列表创建方式内存占用情况
+sys.getsizeof([0] * 3)   # 80
+sys.getsizeof([0, 0, 0])  # 120
+sys.getsizeof([0 for _ in range(3)])   # 88
+
+# 转换为字节码
+dis.dis("[0] * 3")  # BINARY_MULTIPLY -> list_repeat
+dis.dis("[0, 0, 0]")  # LIST_EXTEND
+dis.dis("[0 for _ in range(3)]")  # LIST_APPEND
