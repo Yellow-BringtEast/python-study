@@ -4,6 +4,7 @@
 字典使用键值对存储数据
 字典是无序的数据集合
 """
+from objprint import op
 
 # 一个字典的示例
 xiaoming = {"name": "小明",
@@ -45,3 +46,28 @@ xiaoming = {"name": "小明",
 # k是每一次循环中获取到的键值对的key
 for k in xiaoming:
     print("%s - %s" % (k, xiaoming[k]))
+
+
+# 字典的键可以用自定义类型的对象
+class Position:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    # 重载__eq__和__hash__可以让自定义类型在实例化相同的情况下被视为字典的同一个key
+    def __hash__(self):
+        return hash((self.x, self.y))
+
+    def __eq__(self, other):
+        return self.x == other.x and \
+            self.y == other.y
+
+
+# key是判断的是内存上的id
+d = {}
+pos = Position(0, 1)
+d[pos] = 1
+op(d)
+pos2 = Position(0, 1)
+d[pos2] = 2
+op(d)
