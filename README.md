@@ -1,5 +1,5 @@
 # 当前进度
-3100 / 100000
+3837 / 100000
 
 # python-study
 
@@ -31,4 +31,8 @@ python学习中一些简单的项目。
 
 ## 爬虫
 
-* xu_wordcloud：爬取许嵩网易云热门前50歌曲的歌词，并生成歌词词云；涉及selenium、jieba、wordcloud等库
+* xu_wordcloud.py：爬取许嵩网易云热门前50歌曲的歌词，并生成歌词词云；涉及selenium、jieba、wordcloud等库
+
+* douban_movie.py：非异步爬虫
+
+* douban_movie_asyncio：使用asyncio、aiothhp等实现的异步爬虫提升爬取效率
