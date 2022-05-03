@@ -16,7 +16,7 @@ def main(urls):
 
 
 start = time.time()
-main(['url-1', 'url-2', 'url-3', 'url-4'])
+main(['cur_url-1', 'cur_url-2', 'cur_url-3', 'cur_url-4'])
 end = time.time()
 t = end - start
 print('execute time:', t)
@@ -36,7 +36,7 @@ async def main(urls):
 
 
 start = time.time()
-asyncio.run(main(['url-1', 'url-2', 'url-3', 'url-4']))
+asyncio.run(main(['cur_url-1', 'cur_url-2', 'cur_url-3', 'cur_url-4']))
 end = time.time()
 t = end - start
 print('execute time:', t)
@@ -57,7 +57,7 @@ async def main(urls):
 
 
 start = time.time()
-asyncio.run(main(['url-1', 'url-2', 'url-3', 'url-4']))
+asyncio.run(main(['cur_url-1', 'cur_url-2', 'cur_url-3', 'cur_url-4']))
 end = time.time()
 t = end - start
 print('execute time:', t)
