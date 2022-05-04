@@ -1,5 +1,5 @@
 # 当前进度
-3837 / 100000
+4586 / 100000
 
 # python-study
 
@@ -7,7 +7,7 @@
 
 ## 语法基础
 
-讨论常见BIF，给出简短演示。
+讨论常见BIF、异步编程、装饰器等语法特性，给出简短演示。
 
 ## 简单算法
 
@@ -36,3 +36,5 @@ python学习中一些简单的项目。
 * douban_movie.py：非异步爬虫
 
 * douban_movie_asyncio：使用asyncio、aiothhp等实现的异步爬虫提升爬取效率
+
+* jd_crawler：爬取京东商品搜索页并存入sqlite数据库，使用typehint规范代码风格。
