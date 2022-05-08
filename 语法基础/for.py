@@ -10,7 +10,7 @@ for i in range(100, 1000):
 
     # 判断i是否为水仙数
     if i == sum:
-        print(i,"是水仙数。", end=" ")
+        print(i, "是水仙数。", end=" ")
 
 # 使用迭代器实现for循环
 string = 'I love you'
