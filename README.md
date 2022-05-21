@@ -1,9 +1,17 @@
 # 当前进度
-4739 / 100000
+7072 / 100000
 
 # python-study
 
 零基础无编程经验，从零开始学习python, 记录10w行代码达成过程！
+
+## fluent_python
+
+《流畅的Python（第三版）》有关案例及代码
+
+* chapter_one: 内置数据结构
+
+* chapter_two: 函数
 
 ## 语法基础
 
