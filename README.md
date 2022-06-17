@@ -50,3 +50,6 @@ python学习中一些简单的项目。
 * douban_movie_asyncio：使用asyncio、aiothhp等实现的异步爬虫提升爬取效率
 
 * jd_crawler：爬取京东商品搜索页并存入sqlite数据库，使用typehint规范代码风格。
+
+## 使用小工具
+* 表格截图转excel: 调用腾讯云api将表格截图直接转为excel文件
