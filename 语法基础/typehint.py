@@ -1,4 +1,4 @@
-from typing import List, Sequence, Union
+from typing import List, Sequence, Union, Any, Literal
 
 
 # typehint
@@ -16,6 +16,7 @@ class A:
 
 def get_name(o: A) -> str:
     return o.name
+
 
 get_name(A)
 get_name(A())
@@ -49,3 +50,35 @@ def f(x: Union[int, None]) -> int:
 
 f(None)
 f(0)
+
+# 变量也可以使用typehint
+users: list[str] = []
+users.append(1)
+
+
+# 当函数没有返回值时，应标注返回None
+def f(s: Any) -> None:
+    lst = list[s]
+
+
+a: list = f(1)
+
+
+# 有限选择可用使用Literal
+GenderType = Literal['male', 'female']
+
+
+class Person:
+    def __init__(
+        self,
+        name: str,
+        gender: GenderType
+    ):
+        self.name = name
+        self.gender = gender
+
+
+g: GenderType= 'female'
+b = Person('Bob', 'male')
+c = Person('Bob', 'woman')
+d = Person('Bob', g)
