@@ -41,6 +41,8 @@ python学习中一些简单的项目。
 
 * 数据分析算法：常用的数据挖掘算法，包含决策树、朴素贝叶斯、SVM、KNN、K-means等；涉及sklearn，seaborn等库的使用
 
+* NLP：常见自然语言处理模型
+
 ## 爬虫
 
 * xu_wordcloud.py：爬取许嵩网易云热门前50歌曲的歌词，并生成歌词词云；涉及selenium、jieba、wordcloud等库
@@ -51,5 +53,5 @@ python学习中一些简单的项目。
 
 * jd_crawler：爬取京东商品搜索页并存入sqlite数据库，使用typehint规范代码风格。
 
-## 使用小工具
+## 实用小工具
 * 表格截图转excel: 调用腾讯云api将表格截图直接转为excel文件
