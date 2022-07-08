@@ -56,5 +56,7 @@ python学习中一些简单的项目。
 
 * jd_crawler：爬取京东商品搜索页并存入sqlite数据库，使用typehint规范代码风格。
 
+* tianya_crawler: 使用selenium完成滑块验证码破解，自动获取登陆后的cookies
+
 ## 实用小工具
 * 表格截图转excel: 调用腾讯云api将表格截图直接转为excel文件
