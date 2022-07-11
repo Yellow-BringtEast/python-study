@@ -50,7 +50,7 @@ class GetCookies:
         self.account = account
         self.pwd = pwd
 
-        if (is_headless == False):
+        if not is_headless:
             global driver
             driver = webdriver.Chrome()
 
@@ -76,7 +76,7 @@ class GetCookies:
         else:
             return False
 
-    def get_cookies(self) -> dict:
+    def _get_cookies(self) -> dict:
         """
         登录天眼查，获取cookies
         :return: cookies
@@ -185,14 +185,14 @@ class GetCookies:
 
         return cookies_dict
 
-    def get_cookies_dict(self) -> dict:
+    def get_cookies(self) -> dict:
         """
         出现错误时进行重试，保证获取到的cookie有效
         :return: cookies
         """
         while True:
             try:
-                cookies_dict = self.get_cookies()
+                cookies_dict = self._get_cookies()
                 if 'tyc-user-info' in cookies_dict.keys():
                     driver.close()
                     print('登录成功！')
@@ -273,7 +273,7 @@ class GetCompanyInfo:
 
 if __name__ == '__main__':
     # 自动登录获取cookies
-    cookies = GetCookies(ACCOUNT, PWD, is_headless=False).get_cookies_dict()
+    cookies = GetCookies(ACCOUNT, PWD, is_headless=False).get_cookies()
 
     # 获取企业信息
     com_data = GetCompanyInfo(cookies, '上海蔚来汽车').get_company_info()
