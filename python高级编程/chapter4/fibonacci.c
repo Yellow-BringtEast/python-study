@@ -14,9 +14,18 @@ static PyObject* fibonacci_py(PyObject* self, PyObject* args) {
     long long fib;
 
     if (PyArg_ParseTuple(args, "l", &n)) {
+        // 防止负数在转换为int时过大，导致深度递归，导致堆栈溢出和分段错误
         if (n < 0) {
+            // 在python中抛出错误
             PyErr_SetString(PyExc_ValueError, "n must not be less than 0");
         } else {
+            // 保存当前线程状态，并释放GIL
+            Py_BEGIN_ALLOW_THREADS;
+            fib = fibonacci(n);
+            // 重新获取GIL并恢复线程状态
+            Py_END_ALLOW_THREADS;
+
+
             result = Py_BuildValue("L", fibonacci((unsigned int)n));
         }
     }
